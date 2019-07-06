@@ -23,7 +23,7 @@ data['Better_Event'] = np.where(data['Total_Summer'] > data['Total_Winter'] , 'S
 data['Better_Event'] = np.where(data['Total_Summer'] == data['Total_Winter'] , 'Both', data['Better_Event'])
 
 #Finding the value with max count in 'Better_Event' column
-better_event=data['Better_Event'].value_counts().index.values[0]
+better_event=data['Better_Event'].value_counts().idxmax()
 
 #Printing the better event
 print('Better_Event=', better_event)
